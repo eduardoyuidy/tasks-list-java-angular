@@ -1,0 +1,12 @@
+<h4>Tarefas</h4>
+
+<div *ngFor="let task of tasksList">
+  <div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <div class="input-group-text">
+        <input type="checkbox" disabled [checked]="task.done" aria-label="Checkbox for following text input">
+      </div>
+    </div>    
+    <a class="form-control" [routerLink]="['/tasks', task.id]" style="color:black"><span></span>           {{ task.title }}</a>
+  </div>  
+</div>
